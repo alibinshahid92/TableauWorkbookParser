@@ -7,6 +7,7 @@ from graphviz import Digraph
 from pyvis.network import Network
 import streamlit.components.v1 as components
 
+
 # Function to clean strings
 def remove_sp_char_leave_underscore_square_brackets(string_to_convert):
     return re.sub(r'[^a-zA-Z0-9\s_\[\]]', '', string_to_convert).replace(' ', "_")
@@ -97,7 +98,8 @@ with st.sidebar:
 
 
 
-if uploaded_files:
+
+if uploaded_files:    
     all_dfs = []
     for uploaded_file in uploaded_files:
         with st.spinner(f"Processing {uploaded_file.name}..."):
